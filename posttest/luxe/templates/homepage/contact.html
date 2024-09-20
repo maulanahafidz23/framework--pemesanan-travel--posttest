@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - LuxeId</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    {% extends 'homepage/layout.html' %}
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% block title %} Contact {% endblock %}
+    {% block content %}
+    <style>
+        .contact-info-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-info-item i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header  -->
+
+    <!-- Content -->
+    <main class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Hubungi Kami</h1>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h3 class="mb-4">Kirim Pesan</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Alamat Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subjek</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-4">Informasi Kontak</h3>
+                    <div class="contact-info-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Jl. D.I.Panjaitan, Samarinda, Indonesia</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="bi bi-telephone"></i>
+                        <span>+62 123 4567 890</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="bi bi-envelope"></i>
+                        <span>luxeid@gmail.com</span>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="mb-3">Ikuti Kami</h4>
+                        <a href="#" class="btn btn-outline-primary me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-info me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-danger me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-dark"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer  -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>LuxeId</h5>
+                    <p>Menjadikan perjalanan anda semakin menyenangkan.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about" class="text-white">Tentang Kami</a></li>
+                        <li><a href="#" class="text-white">Syarat dan Ketentuan</a></li>
+                        <li><a href="#" class="text-white">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hubungi Kami</h5>
+                    <p>Email: luxeid@gmail.com</p>
+                    <p>Telepon: +62 123 4567 890</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 LuxeId. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
+</body>
+
+</html>

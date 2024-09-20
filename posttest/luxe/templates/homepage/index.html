@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage - LUXE</title>
+    {% extends 'homepage/layout.html' %}
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% block title %} Homepage {% endblock %}
+    {% block content %}    
+</head>
+
+<body>
+    <body>
+    
+        <!-- Hero Section -->
+        <section class="hero-section d-flex align-items-center">
+            <div class="container text-center ">
+                <h1 class="display-4 fw-bold">Jelajahi Kalimantan Bersama LuxeId</h1>
+                <p class="lead">Temukan pengalaman perjalanan terbaik dengan layanan travel kami</p>
+                <a href="booking" class="btn btn-primary btn-lg">Pesan Sekarang</a>
+            </div>
+        </section>
+    
+        <!-- Featured Destinations -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Destinasi Populer</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="" class="card-img-top" alt="Berau">
+                            <div class="card-body">
+                                <h5 class="card-title">Berau</h5>
+                                <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="" class="card-img-top" alt="Banjarmasin">
+                            <div class="card-body">
+                                <h5 class="card-title">Banjarmasin</h5>
+                                <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="" class="card-img-top" alt="IKN">
+                            <div class="card-body">
+                                <h5 class="card-title">IKN</h5>
+                                <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Why Choose Us -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Mengapa harus LuxeId</h2>
+                <div class="row">
+                    <div class="col-md-4 text-center mb-3">
+                        <img src="" class="rounded-circle mb-3" alt="Best Price">
+                        <h4>Harga Terbaik</h4>
+                        <p>Kami menawarkan harga yang kompetitif untuk setiap perjalanan Anda.</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-3">
+                        <img src="" class="rounded-circle mb-3" alt="Customer Support">
+                        <h4>Layanan Pelanggan 24/7</h4>
+                        <p>Tim kami siap membantu Anda kapan pun dan di mana pun.</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-3">
+                        <img src="" class="rounded-circle mb-3" alt="Experienced Guide">
+                        <h4>Driver Berpengalaman</h4>
+                        <p>Nikmati perjalanan dengan driver yang berpengalaman.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>LuxeId</h5>
+                        <p>Menjadikan perjalanan anda semakin menyenangkan.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Tautan Cepat</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="about" class="text-white">Tentang Kami</a></li>
+                            <li><a href="#" class="text-white">Syarat dan Ketentuan</a></li>
+                            <li><a href="#" class="text-white">Kebijakan Privasi</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Hubungi Kami</h5>
+                        <p>Email: luxeid@gmail.com</p>
+                        <p>Telepon: +62 123 4567 890</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <p>&copy; 2024 LuxeId. Hak Cipta Dilindungi.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    {% endblock %}
+</body>
+
+</html>
+

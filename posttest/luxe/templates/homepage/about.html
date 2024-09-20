@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - LuxeId</title>
+    {% extends 'homepage/layout.html' %}
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% block title %} Homepage {% endblock %}
+    {% block content %}  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .timeline {
+            border-left: 3px solid #007bff;
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+            margin: 0 auto;
+            position: relative;
+            padding: 50px;
+            list-style: none;
+            text-align: left;
+            max-width: 70%;
+        }
+        .timeline .event {
+            border-bottom: 1px dashed #007bff;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .timeline .event:last-of-type {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+        .timeline .event:before,
+        .timeline .event:after {
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+        .timeline .event:before {
+            left: -207px;
+            content: attr(data-date);
+            text-align: right;
+            font-weight: 100;
+            font-size: 0.9em;
+            min-width: 120px;
+        }
+        .timeline .event:after {
+            box-shadow: 0 0 0 3px #007bff;
+            left: -55.8px;
+            background: #fff;
+            border-radius: 50%;
+            height: 9px;
+            width: 9px;
+            content: "";
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Content -->
+    <main class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Tentang LuxeId</h1>
+            
+            <!-- Pengantar -->
+            <section class="mb-5">
+                <p class="lead text-center">LuxeId adalah penyedia layanan transportasi darat terkemuka di Kalimantan, Indonesia. Sejak 2010, kami telah mendedikasikan diri untuk menghubungkan kota-kota dan daerah di seluruh Pulau Kalimantan dengan aman, nyaman, dan terjangkau.</p>
+            </section>
+            
+            <!-- Sejarah Perusahaan -->
+            <section class="mb-5">
+                <h2 class="text-center mb-4">Perjalanan Kami</h2>
+                <ul class="timeline">
+                    <li class="event" data-date="2010">
+                        <h3>Awal Mula di Kalimantan Timur</h3>
+                        <p>LuxeId memulai operasi dengan rute Samarinda-Balikpapan, melihat kebutuhan akan transportasi darat yang andal di wilayah ini.</p>
+                    </li>
+                    <li class="event" data-date="2013">
+                        <h3>Ekspansi ke Kalimantan Selatan</h3>
+                        <p>Kami memperluas layanan ke Banjarmasin dan sekitarnya, menghubungkan lebih banyak kota di Kalimantan.</p>
+                    </li>
+                    <li class="event" data-date="2016">
+                        <h3>Menjangkau Kalimantan Barat dan Tengah</h3>
+                        <p>LuxeId membuka rute-rute baru ke Pontianak dan Palangkaraya, memperkuat jaringan transportasi antar-provinsi di Kalimantan.</p>
+                    </li>
+                    <li class="event" data-date="2022">
+                        <h3>Menjangkau Kalimantan Utara</h3>
+                        <p>LuxeId memperluas pelayanan baru ke daerah Kalimantan Utara, memperluas jaringan transportasi di Kalimantan.</p>
+                    </li>
+                    <li class="event" data-date="2024">
+                        <h3>Inovasi Sistem Pemesanan Online</h3>
+                        <p>Peluncuran platform pemesanan online LuxeId, memudahkan pelanggan dalam memesan tiket perjalanan.</p>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Visi dan Misi -->
+            <section class="mb-5">
+                <h2 class="text-center mb-4">Visi & Misi</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Visi</h3>
+                                <p class="card-text">Menjadi penyedia transportasi darat terdepan di Kalimantan, menghubungkan setiap sudut pulau dengan layanan yang aman, nyaman, dan berkelanjutan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Misi</h3>
+                                <ul>
+                                    <li>Menyediakan layanan transportasi darat yang aman dan andal di seluruh Kalimantan</li>
+                                    <li>Meningkatkan konektivitas antar kota dan daerah di Pulau Kalimantan</li>
+                                    <li>Mendukung perkembangan ekonomi dan pariwisata lokal melalui jaringan transportasi yang efisien</li>
+                                    <li>Menerapkan teknologi terkini untuk meningkatkan pengalaman perjalanan pelanggan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Nilai-Nilai Kami -->
+            <section class="mb-5">
+                <h2 class="text-center mb-4">Nilai-Nilai Kami</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Keselamatan</h3>
+                                <p class="card-text">Prioritas utama kami adalah keselamatan penumpang dalam setiap perjalanan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Keandalan</h3>
+                                <p class="card-text">Kami berkomitmen untuk memberikan layanan yang tepat waktu dan konsisten.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Inovasi</h3>
+                                <p class="card-text">Terus berinovasi untuk meningkatkan kualitas layanan dan efisiensi operasional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Layanan Kami -->
+            <section class="mb-5">
+                <h2 class="text-center mb-4">Layanan Kami</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Antar-Kota</h3>
+                                <p class="card-text">Layanan transportasi antar-kota yang menghubungkan kota-kota besar di Kalimantan seperti Samarinda, Balikpapan, Banjarmasin, Pontianak, dan Palangkaraya.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Wisata Lokal</h3>
+                                <p class="card-text">Paket perjalanan wisata ke destinasi populer di Kalimantan, termasuk Pasar Terapung dan Pulau Derawan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Penutup -->
+            <section>
+                <p class="lead text-center">Dengan LuxeId, jelajahi keindahan Kalimantan melalui perjalanan darat yang aman, nyaman, dan terpercaya. Mari bersama-sama menjelajahi keajaiban Pulau Kalimantan!</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>LuxeId</h5>
+                    <p>Menjadikan perjalanan anda semakin menyenangkan.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about" class="text-white">Tentang Kami</a></li>
+                        <li><a href="#" class="text-white">Syarat dan Ketentuan</a></li>
+                        <li><a href="#" class="text-white">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hubungi Kami</h5>
+                    <p>Email: luxeid@gmail.com</p>
+                    <p>Telepon: +62 123 4567 890</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 LuxeId. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
+</body>
+</html>

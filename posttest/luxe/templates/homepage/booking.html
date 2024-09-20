@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Travel Kalimantan</title>
+    {% extends 'homepage/layout.html' %}
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% block title %} Booking {% endblock %}
+    {% block content %}
+    
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Form Pemesanan Travel</h1>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Tanggal Keberangkatan</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="mb-3"></div>
+                        <label for="departure" class="form-label">Asal</label>
+                        <select class="form-select" id="destination" required>
+                            <option value="">Pilih Kota Asal</option>
+                            <option value="tanjungselor">Tanjung Selor</option>
+                            <option value="berau">Berau</option>
+                            <option value="samarinda">Samarinda</option>
+                            <option value="balikpapan">Balikpapan</option>
+                            <option value="banjarmasin">Banjarmasin</option>
+                            <option value="palangkaraya">Palangkaraya</option>
+                            <option value="pontianak">Pontianak</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Tujuan</label>
+                        <select class="form-select" id="destination" required>
+                            <option value="">Pilih tujuan</option>
+                            <option value="tanjungselor">Tanjung Selor</option>
+                            <option value="berau">Berau</option>
+                            <option value="balikpapan">Balikpapan</option>
+                            <option value="banjarmasin">Banjarmasin</option>
+                            <option value="palangkaraya">Palangkaraya</option>
+                            <option value="pontianak">Pontianak</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="guests" class="form-label">Jumlah Tamu</label>
+                        <input type="number" class="form-control" id="guests" min="1" value="1" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Pesan Sekarang</button>
+                </form>
+            </div>
+            
+            <div class="col-md-6">
+                <h2 class="mb-4">Mengapa Harus ke Kalimantan?</h2>
+                <p>Kalimantan menawarkan pengalaman unik dengan hutan hujan tropis yang luas, sungai-sungai yang mengagumkan, dan budaya yang kaya.</p>
+                <p>Beberapa alasan untuk mengunjungi Kalimantan:</p>
+                <ul>
+                    <li>Taman Nasional Tanjung Puting - Temui orangutan di habitatnya</li>
+                    <li>Derawan Islands - Nikmati keindahan bawah laut yang menakjubkan</li>
+                    <li>Sungai Mahakam - Jelajahi kehidupan suku Dayak</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pemesanan Anda telah diterima. Kami akan menghubungi Anda segera.');
+        });
+    </script>
+    {% endblock %}
+</body>
+</html>
