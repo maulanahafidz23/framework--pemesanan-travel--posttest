@@ -23,10 +23,24 @@ class Command(BaseCommand):
 
         # Seed TourPackages
         rute = [
-            ("Samarinda", "Balikpapan"),
+             ("Samarinda", "Balikpapan"),
             ("Balikpapan", "Samarinda"),
-            # ... (rest of the routes)
+            ("Samarinda", "Tenggarong"),
+            ("Tenggarong", "Samarinda"),
+            ("Samarinda", "Bontang"),
+            ("Bontang", "Samarinda"),
+            ("Samarinda", "Sangatta"),
+            ("Sangatta", "Samarinda"),
+            ("Samarinda", "Berau"),
+            ("Berau", "Samarinda"),
+            ("Samarinda", "Tanjung Selor"),
+            ("Tanjung Selor", "Samarinda"),
+            ("Balikpapan", "IKN"),
+            ("IKN", "Balikpapan"),
+            ("Samarinda", "Banjarmasin"),
+            ("Banjarmasin", "Samarinda"),
         ]
+        
         for start, end in rute:
             TourPackage.objects.create(
                 name=f"{start} to {end}",
