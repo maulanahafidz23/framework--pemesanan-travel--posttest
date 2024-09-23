@@ -1,3 +1,5 @@
+{% extends 'homepage/layout.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage - LUXE</title>
-    {% extends 'homepage/layout.html' %}
     {% load django_bootstrap5 %}
     {% bootstrap_css %}
     {% block title %} Homepage {% endblock %}
@@ -15,7 +16,6 @@
 <body>
     <body>
     
-        <!-- Hero Section -->
         <section class="hero-section d-flex align-items-center">
             <div class="container text-center ">
                 <h1 class="display-4 fw-bold">Jelajahi Kalimantan Bersama LuxeId</h1>
@@ -24,23 +24,23 @@
             </div>
         </section>
     
-        <!-- Featured Destinations -->
+
         <section class="py-5">
             <div class="container">
                 <h2 class="text-center mb-4">Destinasi Populer</h2>
                 <div class="row">
                     <div class="col-md-4 mb-3">
                         <div class="card">
-                            <img src="" class="card-img-top" alt="Berau">
+                            <img src="{% static 'img/Berau.png'%}" class="card-img-top" alt="Berau">
                             <div class="card-body">
                                 <h5 class="card-title">Berau</h5>
-                                <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
+                                <a href="" class="btn btn-outline-primary">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
                         <div class="card">
-                            <img src="" class="card-img-top" alt="Banjarmasin">
+                            <img src="{% static 'img/Banjarmasin.png'%}" class="card-img-top" alt="Banjarmasin">
                             <div class="card-body">
                                 <h5 class="card-title">Banjarmasin</h5>
                                 <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-md-4 mb-3">
                         <div class="card">
-                            <img src="" class="card-img-top" alt="IKN">
+                            <img src="{% static 'img/ikn.png'%}" class="card-img-top" alt="IKN">
                             <div class="card-body">
                                 <h5 class="card-title">IKN</h5>
                                 <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
@@ -60,29 +60,37 @@
             </div>
         </section>
     
-        <!-- Why Choose Us -->
-        <section class="bg-light py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Mengapa harus LuxeId</h2>
-                <div class="row">
-                    <div class="col-md-4 text-center mb-3">
-                        <img src="" class="rounded-circle mb-3" alt="Best Price">
-                        <h4>Harga Terbaik</h4>
-                        <p>Kami menawarkan harga yang kompetitif untuk setiap perjalanan Anda.</p>
+
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Mengapa harus LuxeId</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Best Price</h3>
+                            <p class="card-text">Kami menawarkan harga yang kompetitif untuk setiap perjalanan Anda</p>
+                        </div>
                     </div>
-                    <div class="col-md-4 text-center mb-3">
-                        <img src="" class="rounded-circle mb-3" alt="Customer Support">
-                        <h4>Layanan Pelanggan 24/7</h4>
-                        <p>Tim kami siap membantu Anda kapan pun dan di mana pun.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Customer Support</h3>
+                            <p class="card-text">Tim kami siap membantu Anda kapan pun dan di mana pun</p>
+                        </div>
                     </div>
-                    <div class="col-md-4 text-center mb-3">
-                        <img src="" class="rounded-circle mb-3" alt="Experienced Guide">
-                        <h4>Driver Berpengalaman</h4>
-                        <p>Nikmati perjalanan dengan driver yang berpengalaman.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Experience Driver</h3>
+                            <p class="card-text">Nikmati perjalanan dengan driver yang berpengalaman</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
     
         <!-- Footer -->
         <footer class="bg-dark text-white py-4">
