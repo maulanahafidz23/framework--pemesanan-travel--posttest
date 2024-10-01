@@ -2,7 +2,7 @@
 
 ## Posttest 1
 ### Homepage
-![HomePage](https://drive.google.com/uc?id=https://drive.google.com/file/d/1SwO0YKABo1eyDFhh1oFYmgo1KdYUtaLT/view?usp=drive_link)
+![HomePage](https://drive.google.com/uc?id=1SwO0YKABo1eyDFhh1oFYmgo1KdYUtaLT)
 
 ### Aboutpage
 ![AboutPage](https://drive.google.com/uc?id=)
