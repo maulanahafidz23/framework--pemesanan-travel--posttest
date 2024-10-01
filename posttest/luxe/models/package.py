@@ -8,4 +8,4 @@ class TourPackage(models.Model):
     transportation_type = models.CharField(max_length=50)
 
     def __str__(self):
-        return f"{self.name} ({self.start_location} to {self.end_location})"
+        return f"{self.name} - {self.price} "

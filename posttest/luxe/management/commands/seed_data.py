@@ -51,8 +51,8 @@ class Command(BaseCommand):
             )
 
         # Seed Bookings
-        customers = list(Customers.objects.all())  # Convert queryset to list
-        tour_packages = list(TourPackage.objects.all())  # Convert queryset to list
+        customers = list(Customers.objects.all())  
+        tour_packages = list(TourPackage.objects.all())  
         for _ in range(10):
             customer = random.choice(customers)
             tour_package = random.choice(tour_packages)
