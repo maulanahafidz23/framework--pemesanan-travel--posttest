@@ -70,3 +70,6 @@
 
 ### Fungsi Receipt 
 Fungsi Receipt merupakan fungsi yang digunakan untuk menyimpan informasi kuitansi yang terkait dengan setiap pemesanan (booking). kuitansi ini dibuat secara otomatis ketika menambahkan data booking baru. Di dalam kuitansi ini mencakup jumlah pembayaran & statusnya dimana ketika status pembayaranya adalah "Paid" maka status dari kuitansinya adalah "Final", jika status pembayaranya selain "Pending/Cancel" maka status kuitansinya menjadi draft.
+
+### Penggunaan Static Assets
+Static Asset yang digunakkan merupakan gambar, static asset sendiri digunakkan pada halaman index yaitu index.html
