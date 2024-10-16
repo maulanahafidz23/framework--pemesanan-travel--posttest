@@ -73,3 +73,11 @@ Fungsi Receipt merupakan fungsi yang digunakan untuk menyimpan informasi kuitans
 
 ### Penggunaan Static Assets
 Static Asset yang digunakkan merupakan gambar, static asset sendiri digunakkan pada halaman index yaitu index.html
+
+
+## Posttest 4
+### Table
+![Table](https://drive.google.com/uc?id=1emqXupHct1mc21Qtc-co3vDxUgDGQtyy)
+
+### Form
+![Form](https://drive.google.com/uc?id=1OUTTdrlAMhfVGOa2BN_We0gj6KXm6Bbg)
