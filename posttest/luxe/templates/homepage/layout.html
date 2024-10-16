@@ -22,7 +22,7 @@
                         <a class="nav-link " aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Destinasi</a>
+                        <a class="nav-link" href="{% url 'customer_index' %}">Customer</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Paket Travel</a>
@@ -35,10 +35,20 @@
         </div>
     </nav>
     <div class="container mt-4">
+        {% if messages %}
+        <div>
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
         {% block content %}
-        {% endblock %}
-    </div>
-    {% bootstrap_javascript %}
+        {% endblock%}
+        {% bootstrap_javascript %}
 </body>
 
 </html>

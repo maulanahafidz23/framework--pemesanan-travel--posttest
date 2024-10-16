@@ -1,0 +1,82 @@
+{% extends 'homepage/layout.html' %}
+{% block title %} Daftar Customer {% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Daftar Customer</h1>
+    <a href="{% url 'customer_create' %}" class="btn btn-primary mb-3">Tambah Customer</a>
+    <form method="GET" action="{% url 'customer_index' %}" class="d-flex mb-3">
+        <input class="form-control me-2" type="search" name="q" placeholder="Cari customer..." value="{{ query|default:'' }}" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Cari</button>
+        </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NIK</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>No. HP</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+            <tr>
+                <td>{{ customer.nik }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.phone_number }}</td>
+                <td>
+                    <a href="{% url 'customer_update' customer.id %}" class="btn btn-sm btn-warning">Ubah</a>
+                    <button class="btn btn-sm btn-danger" onclick="confirmDelete('{{ customer.id }}')">Hapus</button>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" class="text-center">Tidak ada data customer</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function confirmDelete(customerId) {
+        Swal.fire({
+            title: 'Data customer akan dihapus',
+            text: 'Data tidak akan bisa dikembalikan!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, Hapus!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Ini AJAX
+                fetch(`/customer/delete/${customerId}`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Customer has been deleted.',
+                            'success'
+                        ).then(() => {
+                            // Reload the page after success
+                            window.location.reload();
+                        });
+                    } else {
+                        Swal.fire(
+                            'Error!',
+                            'There was an issue deleting the customer.',
+                            'error'
+                        );
+                    }
+                });
+            }
+        });
+    }
+</script>
+{% endblock %}
